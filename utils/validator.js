@@ -1,8 +1,8 @@
 module.exports = {
   user: (app, request, response) =>{
-    request.assert('name', 'O nome é obrigatório.').notEmpty();
-    request.assert('email', 'O E-mail está inválido.').notEmpty().isEmail();
-    request.assert('password', 'O password é obrigatório.').notEmpty();
+    request.assert('_name', 'O nome é obrigatório.').notEmpty();
+    request.assert('_email', 'O E-mail está inválido.').notEmpty().isEmail();
+    request.assert('_password', 'O password é obrigatório.').notEmpty();
 
     let errors = request.validationErrors();
 
